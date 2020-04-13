@@ -11,11 +11,11 @@
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
  -->
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 
-<!-- Mirrored from demos.creative-tim.com/argon-dashboard-pro/pages/tables/tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Nov 2019 08:12:49 GMT -->
+<!-- Mirrored from demos.creative-tim.com/argon-dashboard-pro/pages/tables/datatables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Nov 2019 08:12:51 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
   <meta charset="utf-8">
@@ -23,7 +23,7 @@
   <meta name="description" content="Start your development with a Dashboard for Bootstrap 4.">
   <meta name="author" content="Creative Tim">
   <title>
-      @yield('title')
+     @yield('title')
   </title>
   <!-- Extra details for Live View on GitHub Pages -->
   <!-- Canonical SEO -->
@@ -57,6 +57,10 @@
   <!-- Icons -->
   <link rel="stylesheet" href="../../assets/vendor/nucleo/css/nucleo.css" type="text/css">
   <link rel="stylesheet" href="../../assets/vendor/%40fortawesome/fontawesome-free/css/all.min.css" type="text/css">
+  <!-- Page plugins -->
+  <link rel="stylesheet" href="../../assets/vendor/datatables.net-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css">
+  <link rel="stylesheet" href="../../assets/vendor/datatables.net-select-bs4/css/select.bootstrap4.min.css">
   <!-- Argon CSS -->
   <link rel="stylesheet" href="../../assets/css/argon.min9f1e.css?v=1.1.0" type="text/css">
   <!-- Google Tag Manager -->
@@ -83,16 +87,14 @@
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
+
   <!-- Sidenav -->
-
-  
-
   <nav class="sidenav navbar navbar-vertical fixed-left navbar-expand-xs navbar-light bg-white" id="sidenav-main">
     <div class="scrollbar-inner">
       <!-- Brand -->
       <div class="sidenav-header d-flex align-items-center">
         <a class="navbar-brand" href="../dashboards/dashboard.html">
-          <img src="../../assets/img/brand/blue.png" class="navbar-brand-img" alt="...">
+          <img src="#" class="navbar-brand-img" alt="LOGO">
         </a>
         <div class="ml-auto">
           <!-- Sidenav toggler -->
@@ -111,134 +113,14 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#navbar-dashboards" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-dashboards">
-                <i class="ni ni-shop text-primary"></i>
-                <span class="nav-link-text">Dashboards</span>
+              <a class="nav-link" href="#navbar-dashboards">
+                <i class="ni ni-shop"></i>
+                <span class="nav-link-text">Dashboard</span>
               </a>
-              <div class="collapse" id="navbar-dashboards">
-                <ul class="nav nav-sm flex-column">
-                  <li class="nav-item">
-                    <a href="../dashboards/dashboard.html" class="nav-link">Dashboard</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../dashboards/alternative.html" class="nav-link">Alternative</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-examples">
-                <i class="ni ni-ungroup text-orange"></i>
-                <span class="nav-link-text">Examples</span>
-              </a>
-              <div class="collapse" id="navbar-examples">
-                <ul class="nav nav-sm flex-column">
-                  <li class="nav-item">
-                    <a href="../examples/pricing.html" class="nav-link">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../examples/login.html" class="nav-link">Login</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../examples/register.html" class="nav-link">Register</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../examples/lock.html" class="nav-link">Lock</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../examples/timeline.html" class="nav-link">Timeline</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../examples/profile.html" class="nav-link">Profile</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#navbar-components" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-components">
-                <i class="ni ni-ui-04 text-info"></i>
-                <span class="nav-link-text">Components</span>
-              </a>
-              <div class="collapse" id="navbar-components">
-                <ul class="nav nav-sm flex-column">
-                  <li class="nav-item">
-                    <a href="../components/buttons.html" class="nav-link">Buttons</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../components/cards.html" class="nav-link">Cards</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../components/grid.html" class="nav-link">Grid</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../components/notifications.html" class="nav-link">Notifications</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../components/icons.html" class="nav-link">Icons</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../components/typography.html" class="nav-link">Typography</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#navbar-multilevel" class="nav-link" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-multilevel">Multi level</a>
-                    <div class="collapse show" id="navbar-multilevel" style="">
-                      <ul class="nav nav-sm flex-column">
-                        <li class="nav-item">
-                          <a href="#!" class="nav-link ">Third level menu</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#!" class="nav-link ">Just another link</a>
-                        </li>
-                        <li class="nav-item">
-                          <a href="#!" class="nav-link ">One last link</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#navbar-forms" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-forms">
-                <i class="ni ni-single-copy-04 text-pink"></i>
-                <span class="nav-link-text">Forms</span>
-              </a>
-              <div class="collapse" id="navbar-forms">
-                <ul class="nav nav-sm flex-column">
-                  <li class="nav-item">
-                    <a href="../forms/elements.html" class="nav-link">Elements</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../forms/components.html" class="nav-link">Components</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="../forms/validation.html" class="nav-link">Validation</a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#navbar-tables" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-tables">
-                <i class="ni ni-align-left-2 text-default"></i>
-                <span class="nav-link-text">Tables</span>
-              </a>
-              <div class="collapse show" id="navbar-tables">
-                <ul class="nav nav-sm flex-column">
-                  <li class="nav-item">
-                    <a href="tables.html" class="nav-link">Tables</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="sortable.html" class="nav-link">Sortable</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="datatables.html" class="nav-link">Datatables</a>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
-                <i class="ni ni-map-big text-primary"></i>
+                <i class="ni ni-map-big"></i>
                 <span class="nav-link-text">Maps</span>
               </a>
               <div class="collapse" id="navbar-maps">
@@ -252,60 +134,15 @@
                 </ul>
               </div>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../widgets.html">
-                <i class="ni ni-archive-2 text-green"></i>
-                <span class="nav-link-text">Widgets</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../charts.html">
-                <i class="ni ni-chart-pie-35 text-info"></i>
-                <span class="nav-link-text">Charts</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../calendar.html">
-                <i class="ni ni-calendar-grid-58 text-red"></i>
-                <span class="nav-link-text">Calendar</span>
-              </a>
-            </li>
           </ul>
           <!-- Divider -->
           <hr class="my-3">
-          <!-- Heading -->
-          <h6 class="navbar-heading p-0 text-muted">Documentation</h6>
-          <!-- Navigation -->
-          <ul class="navbar-nav mb-md-3">
-            <li class="nav-item">
-              <a class="nav-link" href="../../docs/getting-started/overview.html" target="_blank">
-                <i class="ni ni-spaceship"></i>
-                <span class="nav-link-text">Getting started</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../docs/foundation/colors.html" target="_blank">
-                <i class="ni ni-palette"></i>
-                <span class="nav-link-text">Foundation</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../docs/components/alerts.html" target="_blank">
-                <i class="ni ni-ui-04"></i>
-                <span class="nav-link-text">Components</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="../../docs/plugins/charts.html" target="_blank">
-                <i class="ni ni-chart-pie-35"></i>
-                <span class="nav-link-text">Plugins</span>
-              </a>
-            </li>
-          </ul>
+          
         </div>
       </div>
     </div>
   </nav>
+
   <!-- Main content -->
   <div class="main-content" id="panel">
     <!-- Topnav -->
@@ -350,7 +187,7 @@
               <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right py-0 overflow-hidden">
                 <!-- Dropdown header -->
                 <div class="px-3 py-3">
-                  <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">13</strong> notifications.</h6>
+                  <h6 class="text-sm text-muted m-0">You have <strong class="text-primary">2</strong> notifications.</h6>
                 </div>
                 <!-- List group -->
                 <div class="list-group list-group-flush">
@@ -358,7 +195,7 @@
                     <div class="row align-items-center">
                       <div class="col-auto">
                         <!-- Avatar -->
-                        <img alt="Image placeholder" src="../../assets/img/theme/team-1.jpg" class="avatar rounded-circle">
+                        <img alt="Image placeholder" src="" class="avatar rounded-circle">
                       </div>
                       <div class="col ml--2">
                         <div class="d-flex justify-content-between align-items-center">
@@ -392,63 +229,6 @@
                       </div>
                     </div>
                   </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../../assets/img/theme/team-3.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>5 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Your posts have been liked a lot.</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../../assets/img/theme/team-4.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>2 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">Let's meet at Starbucks at 11:30. Wdyt?</p>
-                      </div>
-                    </div>
-                  </a>
-                  <a href="#!" class="list-group-item list-group-item-action">
-                    <div class="row align-items-center">
-                      <div class="col-auto">
-                        <!-- Avatar -->
-                        <img alt="Image placeholder" src="../../assets/img/theme/team-5.jpg" class="avatar rounded-circle">
-                      </div>
-                      <div class="col ml--2">
-                        <div class="d-flex justify-content-between align-items-center">
-                          <div>
-                            <h4 class="mb-0 text-sm">John Snow</h4>
-                          </div>
-                          <div class="text-right text-muted">
-                            <small>3 hrs ago</small>
-                          </div>
-                        </div>
-                        <p class="text-sm mb-0">A new issue has been reported for Argon.</p>
-                      </div>
-                    </div>
-                  </a>
                 </div>
                 <!-- View all -->
                 <a href="#!" class="dropdown-item text-center text-primary font-weight-bold py-3">View all</a>
@@ -458,7 +238,7 @@
               <a class="nav-link" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="ni ni-ungroup"></i>
               </a>
-              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-default dropdown-menu-right">
+              <div class="dropdown-menu dropdown-menu-lg dropdown-menu-dark bg-success-dark dropdown-menu-right">
                 <div class="row shortcuts px-4">
                   <a href="#!" class="col-4 shortcut-item">
                     <span class="shortcut-media avatar rounded-circle bg-gradient-red">
@@ -505,10 +285,10 @@
               <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <div class="media align-items-center">
                   <span class="avatar avatar-sm rounded-circle">
-                    <img alt="Image placeholder" src="../../assets/img/theme/team-4.jpg">
+                    <img alt="Image placeholder" src="../../assets/img/profile/Justin.jpg">
                   </span>
                   <div class="media-body ml-2 d-none d-lg-block">
-                    <span class="mb-0 text-sm  font-weight-bold">John Snow</span>
+                    <span class="mb-0 text-sm  font-weight-bold">Justin Farry</span>
                   </div>
                 </div>
               </a>
@@ -544,57 +324,185 @@
       </div>
     </nav>
     <!-- Header -->
-    <!-- Header -->
     <div class="header bg-primary pb-6">
       <div class="container-fluid">
         <div class="header-body">
           <div class="row align-items-center py-4">
             <div class="col-lg-6 col-7">
-              <h6 class="h2 text-white d-inline-block mb-0">Tables</h6>
+              <h6 class="h2 text-white d-inline-block mb-0">G&A</h6>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
                   <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
-                  <li class="breadcrumb-item"><a href="#">Tables</a></li>
-                  <li class="breadcrumb-item active" aria-current="page">Tables</li>
+                  <li class="breadcrumb-item"><a href="#">FTE</a></li>
+                  <li class="breadcrumb-item active" aria-current="page"></li>
                 </ol>
               </nav>
             </div>
             <div class="col-lg-6 col-5 text-right">
-              <a href="#" class="btn btn-sm btn-neutral">New</a>
-              <a href="#" class="btn btn-sm btn-neutral">Filters</a>
+            <button type="button" class="btn btn-sm btn-success-dark" data-toggle="modal" data-target="#preset">Settings</button>
+              <a href="#" class="btn btn-sm btn-success">EXP</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-    
+
+
+    <!-- Modal Calculation Settings-->
+    <div class="modal fade" id="preset" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title text-success-dark" id="exampleModalLabel">Calculation Settings</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+
+
+                <div class="nav-wrapper">
+                    <ul class="nav nav-pills nav-fill flex-column flex-md-row" id="tabs-icons-text" role="tablist">
+                        <li class="nav-item" id="salary">
+                            <a class="nav-link mb-sm-3 mb-md-0 active" id="tabs-icons-text-1-tab" data-toggle="tab" href="#tabs-icons-text-1" role="tab" aria-controls="tabs-icons-text-1" aria-selected="true"><i class="fas fa-dollar-sign mr-2"></i>Salary</a>
+                        </li>
+                        <li class="nav-item" id="personalExpense">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-2-tab" data-toggle="tab" href="#tabs-icons-text-2" role="tab" aria-controls="tabs-icons-text-2" aria-selected="false"><i class="far fa-address-card mr-2"></i>Personal Expense</a>
+                        </li>
+                        <li class="nav-item" id="utilities">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-3-tab" data-toggle="tab" href="#tabs-icons-text-3" role="tab" aria-controls="tabs-icons-text-3" aria-selected="false"><i class="fas fa-network-wired mr-2"></i>Utilities</a>
+                        </li>
+                        <li class="nav-item" id="AssetPurchase">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-4-tab" data-toggle="tab" href="#tabs-icons-text-4" role="tab" aria-controls="tabs-icons-text-4" aria-selected="true"><i class="fas fa-money-check-alt mr-2"></i>Asset Purchase</a>
+                        </li>
+                        <li class="nav-item" id="computer">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-5-tab" data-toggle="tab" href="#tabs-icons-text-5" role="tab" aria-controls="tabs-icons-text-5" aria-selected="false"><i class="ni ni-laptop mr-2"></i>Computer</a>
+                        </li>
+                        <li class="nav-item" id="other">
+                            <a class="nav-link mb-sm-3 mb-md-0" id="tabs-icons-text-6-tab" data-toggle="tab" href="#tabs-icons-text-6" role="tab" aria-controls="tabs-icons-text-6" aria-selected="false"><i class="fab fa-ethereum mr-2"></i>Other</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="tab-content" id="myTabContent">
+                          <!--Salary Input-->
+                            <div class="tab-pane fade show active" id="tabs-icons-text-1" role="tabpanel" aria-labelledby="tabs-icons-text-1-tab">
+                            <div class="p-4 bg-secondary" id="annualBonus">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Annual Bonus">
+                            </div>
+                            <div class="p-4 bg-secondary" id="AnnualRaise">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Annual Raise">
+                            </div>
+                            <div class="p-4 bg-secondary" id="monthlyBenefist">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Monthly Benefits">
+                            </div>
+                        </div>
+                            
+                            <!--Per Person Expense-->
+                        <div class="tab-pane fade" id="tabs-icons-text-2" role="tabpanel" aria-labelledby="tabs-icons-text-2-tab">
+                            <div class="p-4 bg-secondary" id="Excutive">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Excutive">
+                            </div>
+                            <div class="p-4 bg-secondary" id="salesMarketing">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Sale & Marketing">
+                            </div>
+                            <div class="p-4 bg-secondary" id="operations">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Operations">
+                            </div>
+                            <div class="p-4 bg-secondary" id="generalAdmin">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% General & Admin">
+                            </div>
+                      </div>
+                            <!-- Utilities -->
+                      <div class="tab-pane fade" id="tabs-icons-text-3" role="tabpanel" aria-labelledby="tabs-icons-text-3-tab">
+                      <div class="p-4 bg-secondary" id="Excutive">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Excutive">
+                            </div>
+                            <div class="p-4 bg-secondary" id="salesMarketing">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Sale & Marketing">
+                            </div>
+                            <div class="p-4 bg-secondary" id="operations">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Operations">
+                            </div>
+                            <div class="p-4 bg-secondary" id="generalAdmin">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% General & Admin">
+                            </div>
+                      </div>
+                            <!-- Asset Purchase -->
+                      <div class="tab-pane fade show" id="tabs-icons-text-4" role="tabpanel" aria-labelledby="tabs-icons-text-4-tab">
+                      <div class="p-4 bg-secondary" id="Excutive">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Excutive">
+                            </div>
+                            <div class="p-4 bg-secondary" id="salesMarketing">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Sale & Marketing">
+                            </div>
+                            <div class="p-4 bg-secondary" id="operations">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Operations">
+                            </div>
+                            <div class="p-4 bg-secondary" id="generalAdmin">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% General & Admin">
+                            </div>
+                      </div>
+                            <!--Computer -->
+                      <div class="tab-pane fade" id="tabs-icons-text-5" role="tabpanel" aria-labelledby="tabs-icons-text-5-tab">
+                      <div class="p-4 bg-secondary" id="Excutive">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Excutive">
+                            </div>
+                            <div class="p-4 bg-secondary" id="salesMarketing">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Sale & Marketing">
+                            </div>
+                            <div class="p-4 bg-secondary" id="operations">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Operations">
+                            </div>
+                            <div class="p-4 bg-secondary" id="generalAdmin">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% General & Admin">
+                            </div>
+                      </div>
+                            <!--other -->
+                      <div class="tab-pane fade" id="tabs-icons-text-6" role="tabpanel" aria-labelledby="tabs-icons-text-6-tab">
+                      <div class="p-4 bg-secondary" id="Excutive">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Excutive">
+                            </div>
+                            <div class="p-4 bg-secondary" id="salesMarketing">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Sale & Marketing">
+                            </div>
+                            <div class="p-4 bg-secondary" id="operations">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% Operations">
+                            </div>
+                            <div class="p-4 bg-secondary" id="generalAdmin">
+                                <input type="number" class="form-control form-control-alternative" placeholder="% General & Admin">
+                            </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+
+          </div>
+          <div class="modal-footer">
+            <div class="text-center">
+                <!--<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+                <button type="button" class="btn btn-md btn-success-dark">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     <!-- Page content -->
     <div class="container-fluid mt--6">
-    @yield('content')
+      <!-- Table -->
+      @yield('content')
       
       <!-- Footer -->
       <footer class="footer pt-0">
         <div class="row align-items-center justify-content-lg-between">
           <div class="col-lg-6">
             <div class="copyright text-center text-lg-left text-muted">
-              &copy; 2019 <a href="https://www.creative-tim.com/" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+              &copy; 2020 
             </div>
-          </div>
-          <div class="col-lg-6">
-            <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/" class="nav-link" target="_blank">Creative Tim</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-              </li>
-              <li class="nav-item">
-                <a href="http://blog.creative-tim.com/" class="nav-link" target="_blank">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a href="https://www.creative-tim.com/license" class="nav-link" target="_blank">License</a>
-              </li>
-            </ul>
           </div>
         </div>
       </footer>
@@ -607,6 +515,17 @@
   <script src="../../assets/vendor/js-cookie/js.cookie.js"></script>
   <script src="../../assets/vendor/jquery.scrollbar/jquery.scrollbar.min.js"></script>
   <script src="../../assets/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js"></script>
+  <!-- Optional JS -->
+  <script src="../../assets/vendor/datatables.net/js/jquery.dataTables.min.js"></script>
+  <script src="../../assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
+  <script src="../../assets/vendor/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+  <script src="../../assets/vendor/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
+  <script src="../../assets/vendor/datatables.net-buttons/js/buttons.html5.min.js"></script>
+  <script src="../../assets/vendor/datatables.net-buttons/js/buttons.flash.min.js"></script>
+  <script src="../../assets/vendor/datatables.net-buttons/js/buttons.print.min.js"></script>
+  <script src="../../assets/vendor/datatables.net-select/js/dataTables.select.min.js"></script>
+  <script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
+  <script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
   <!-- Argon JS -->
   <script src="../../assets/js/argon.min9f1e.js?v=1.1.0"></script>
   <!-- Demo JS - remove this in your project -->
@@ -648,5 +567,5 @@
 </body>
 
 
-<!-- Mirrored from demos.creative-tim.com/argon-dashboard-pro/pages/tables/tables.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 20 Nov 2019 08:12:49 GMT -->
+
 </html>
