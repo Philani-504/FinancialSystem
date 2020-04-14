@@ -5327,8 +5327,8 @@ input[type=submit].btn-block {
 .page-item.active .page-link {
     z-index: 1;
     color: #fff;
-    border-color: #3cb371;
-    background-color: #3cb371;
+    border-color: var(--success-dark);
+    background-color: var(--success-dark);
 }
 
 .page-item.disabled .page-link {
@@ -5645,6 +5645,12 @@ a.badge:hover {
 
 .alert-secondary .alert-link {
     color: #d2e3ee
+}
+
+.alert-success-dark{
+    color: #fff;
+    border-color: #2e754f ;
+    background-color: #2e754f ;
 }
 
 .alert-success {
@@ -15827,7 +15833,7 @@ textarea[resize=horizontal] {
 }
 
 .header {
-    position: relative
+   /* position: relative*/
 }
 
 .icon {

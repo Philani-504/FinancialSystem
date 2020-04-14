@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/Admin', function () {
+Route::get('/G&A', function () {
     return view('Admin.G&A');
+});
+
+Route::get('/G&A-Exp', function () {
+    return view('Admin.G&A-Exp');
 });

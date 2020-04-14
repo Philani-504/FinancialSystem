@@ -739,7 +739,7 @@ var DatatableBasic = function() {
                 }
             }
         }, a.on("init.dt", function() {
-            $(".dt-buttons .btn").removeClass("btn-secondary").addClass("btn-sm btn-success")
+            $(".dt-buttons .btn").removeClass("btn-secondary").addClass("btn-sm btn-success-dark")
         }).DataTable(e))
     }(),
     Dropzones = function() {
