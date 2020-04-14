@@ -10481,9 +10481,9 @@ button.bg-darker:hover {
 }
 
 @media (min-width:768px) {
-    .m-md-0 {
-        /*margin: 0!important*/
-    }
+    /*.m-md-0 {
+        margin: 0!important
+    }*/
     .mt-md-0,
     .my-md-0 {
         margin-top: 0!important
@@ -10492,10 +10492,10 @@ button.bg-darker:hover {
     .mx-md-0 {
         margin-right: 0!important
     }
-    .mb-md-0,
+    /*.mb-md-0,
     .my-md-0 {
-       /* margin-bottom: 0!important */
-    }
+        margin-bottom: 0!important 
+    } */
     .ml-md-0,
     .mx-md-0 {
         margin-left: 0!important
@@ -15831,10 +15831,10 @@ textarea[resize=horizontal] {
 .no-gutters>[class^=col-] span {
     border-radius: 0
 }
-
+/*
 .header {
-   /* position: relative*/
-}
+    position: relative
+}*/
 
 .icon {
     width: 3rem;
@@ -15876,7 +15876,7 @@ textarea[resize=horizontal] {
 }
 
 .icon-lg+.icon-text {
-    width: calc(100% - $icon-size-lg - 1)
+    width: calc(100% - icon-size-lg - 1)
 }
 
 .icon-sm {
@@ -15890,7 +15890,7 @@ textarea[resize=horizontal] {
 }
 
 .icon-sm+.icon-text {
-    width: calc(100% - $icon-size-sm - 1)
+    width: calc(100% - icon-size-sm - 1)
 }
 
 .icon-xs {
@@ -15904,7 +15904,7 @@ textarea[resize=horizontal] {
 }
 
 .icon-xs+.icon-text {
-    width: calc(100% - $icon-size-xs - 1)
+    width: calc(100% - icon-size-xs - 1)
 }
 
 .icon-actions>a {
@@ -21195,7 +21195,7 @@ table.dataTable tbody>tr.selected {
 }
 
 .dataTables_filter {
-    display: inline-block;
+    /*display: inline-block;*/
     float: right;
     padding-right: 1.5rem
 }
@@ -24529,7 +24529,7 @@ pre>code.highlight {
 }
 
 .color-swatch-header .pass-fail-item {
-    display: inline-block;
+    /*display: inline-block;*/
     float: left;
     padding: 2px;
     text-align: center
@@ -24614,7 +24614,7 @@ pre>code.highlight {
 .table-colors .swatch,
 .table-colors:first-child .swatch {
     display: inline-block;
-    float: left;
+    /*float: left;*/
     width: 40px;
     height: 40px;
     margin-right: 20px;
@@ -24632,7 +24632,7 @@ pre>code.highlight {
     font-size: 10px;
     font-weight: 600;
     line-height: 10px;
-    display: inline-block;
+   /* display: inline-block;*/
     float: left;
     margin: 5px 10px 0 0;
     padding: 2px 4px;

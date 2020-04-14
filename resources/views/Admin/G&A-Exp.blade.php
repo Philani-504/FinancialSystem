@@ -213,7 +213,7 @@
                     <td>5%</td>
                     <td>
                         <div>
-                            <i class="fas fa-user-edit text-success-dark"></i> |
+                            <i class="fas fa-pen text-success-dark"></i> |
                             <i class="fas fa-trash text-success-dark"></i>
                         </div>
                     </td>
@@ -226,7 +226,7 @@
                     <td>10%</td>
                     <td>
                     <div>
-                        <i class="fas fa-user-edit text-success-dark"></i> |
+                        <i class="fas fa-pen text-success-dark"></i>|
                         <i class="fas fa-trash text-success-dark"></i>
                       </div>
                     </td>
@@ -239,7 +239,7 @@
                     <td>10%</td>
                     <td>
                     <div>
-                        <i class="fas fa-user-edit text-success-dark"></i> |
+                        <i class="fas fa-pen text-success-dark"></i> |
                         <i class="fas fa-trash text-success-dark"></i>
                       </div>
                     </td>
