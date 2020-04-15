@@ -50,6 +50,8 @@
   <meta property="og:image" content="../../../../s3.amazonaws.com/creativetim_bucket/products/137/original/opt_adp_thumbnail.jpg" />
   <meta property="og:description" content="Start your development with a Dashboard for Bootstrap 4." />
   <meta property="og:site_name" content="Creative Tim" />
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Favicon -->
   <link rel="icon" href="../../assets/img/brand/favicon.png" type="image/png">
   <!-- Fonts -->
@@ -113,10 +115,56 @@
           <!-- Nav items -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#navbar-dashboards">
-                <i class="ni ni-shop"></i>
+              <a class="nav-link" href="#">
+                <i class="ni ni-app"></i>
                 <span class="nav-link-text">Dashboard</span>
               </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/DepartmentLanding">
+                <i class="fas fa-map-marked-alt"></i>
+                <span class="nav-link-text">Region</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/DepartmentLanding">
+                <i class="fas fa-building"></i>
+                <span class="nav-link-text">Departments</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/DepartmentLanding">
+                <i class="fas fa-business-time"></i>
+                <span class="nav-link-text">Revenue</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/DepartmentLanding">
+                <i class="fas fa-balance-scale"></i>
+                <span class="nav-link-text">Balance Sheet</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/DepartmentLanding">
+                <i class="fas fa-sticky-note"></i>
+                <span class="nav-link-text">Profit & Loss</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">
+                <i class="ni ni-paper-diploma"></i>
+                <span class="nav-link-text">Cary Forward</span>
+              </a>
+              <div class="collapse" id="navbar-maps">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="../maps/google.html" class="nav-link">Cary Forward</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="../maps/vector.html" class="nav-link">Cary Forward Assumptions</a>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#navbar-maps" data-toggle="collapse" role="button" aria-expanded="false" aria-controls="navbar-maps">

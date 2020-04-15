@@ -18,9 +18,17 @@ Route::get('/', function () {
 });
 
 Route::get('/G&A', function () {
-    return view('Admin.G&A');
+    return view('Admin.Departments.G&A');
 });
 
 Route::get('/G&A-Exp', function () {
-    return view('Admin.G&A-Exp');
+    return view('Admin.Departments.G&A-Exp');
+});
+
+Route::get('/DepartmentLanding', function () {
+    return view('Admin.Departments.DepartmentLanding');
+});
+
+Route::get('/Login', function () {
+    return view('Admin.LoginReg.Login');
 });
