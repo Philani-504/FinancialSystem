@@ -15,7 +15,7 @@
               <h6 class="h2 text-white d-inline-block mb-0">G&A</h6>
               <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
                 <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
-                  <li class="breadcrumb-item"><a href="#"><i class="fas fa-home"></i></a></li>
+                  <li class="breadcrumb-item"><a href="#"><i class="fab fa-accusoft"></i></a></li>
                   <li class="breadcrumb-item"><a href="#">FTE</a></li>
                   <li class="breadcrumb-item active" aria-current="page"></li>
                 </ol>
@@ -538,20 +538,28 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <div class=" " style="margin-bottom: 3rem;">
+            <!-- Surtitle -->
+            <h6 class="surtitle text-success-dark">Department Performance</h6>
+            <!-- Title -->
+            <h5 class="h3 mb-0 text-success-dark">Total</h5>
+          </div>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
-
-        <div class="card bg-success-dark">
-    <div class="card-body">
-        <div class="chart">
-            <!-- Chart wrapper -->
-            <canvas id="chart-sales-dark" class="chart-canvas"></canvas>
+        <div class="modal-body">
+            <div class="">
+              <div class="">
+                  <div class="chart">
+                      <!-- Chart wrapper -->
+                      <canvas id="chart-sales-dark" class="chart-canvas"></canvas>
+                  </div>
+              </div>
+            </div>
         </div>
     </div>
+  </div>
 </div>
 
 

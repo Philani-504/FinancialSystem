@@ -78,7 +78,7 @@
   <!-- End Google Tag Manager -->
 </head>
 
-<body class="bg-default">
+<body class="bg-green-shade">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKDMSK6" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
@@ -107,34 +107,34 @@
             </div>
           </div>
         </div>
-        <ul class="navbar-nav mr-auto">
+       <!--  <ul class="navbar-nav mr-auto">
           <li class="nav-item">
             <a href="login.html" class="nav-link">
-              <span class="nav-link-inner--text">Login</span>
+              <span class="text-success-dark">Login</span>
             </a>
           </li>
           <li class="nav-item">
             <a href="register.html" class="nav-link">
-              <span class="nav-link-inner--text">Register</span>
+              <span class="text-success-dark">Register</span>
             </a>
           </li>
-        </ul>
+       </ul>
         <hr class="d-lg-none" />
         <ul class="navbar-nav align-items-lg-center ml-lg-auto">
           <li class="nav-item">
             <a class="nav-link nav-link-icon" href="https://www.facebook.com/creativetim" target="_blank" data-toggle="tooltip" data-original-title="Like us on Facebook">
               <i class="fab fa-facebook-square"></i>
-              <span class="nav-link-inner--text d-lg-none">Facebook</span>
+              <span class="text-success-dark d-lg-none">Facebook</span>
             </a>
-          </li>
-        </ul>
+          </li> 
+        </ul> -->
       </div>
     </div>
   </nav>
   <!-- Main content -->
   <div class="main-content">
     <!-- Header -->
-    <div class="header bg-gradient-primary py-7 py-lg-8 pt-lg-9">
+    <div class="header bg-green-light py-7 py-lg-8 pt-lg-9">
       <!--<div class="container">
         <div class="header-body text-center mb-7">
           <div class="row justify-content-center">
@@ -144,12 +144,12 @@
             </div>
           </div>
         </div>
-      </div> -->
+      </div> 
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
         </svg>
-      </div>
+      </div> -->
     </div>
     <!-- Page content -->
     <div class="container mt--8 pb-5">
@@ -157,22 +157,12 @@
         <div class="col-lg-5 col-md-7">
           <div class="card bg-secondary border-0 mb-0">
             <div class="card-header bg-transparent pb-5">
-              <div class="text-muted text-center mt-2 mb-3"><small>Sign in with</small></div>
-              <div class="btn-wrapper text-center">
-              <!-- <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="../../assets/img/icons/common/github.svg"></span>
-                  <span class="btn-inner--text">Github</span>
-                </a> -->
-                <a href="#" class="btn btn-neutral btn-icon">
-                  <span class="btn-inner--icon"><img src="../../assets/img/icons/common/google.svg"></span>
-                  <span class="btn-inner--text">Google</span>
-                </a>
-              </div>
+             <div class="text-success-dark text-center"><strong>Sign-In</strong></div>
             </div>
             <div class="card-body px-lg-5 py-lg-5">
-              <div class="text-center text-success-dark mb-4">
-                <small>Or sign in with credentials</small>
-              </div>
+            <div class="text-center text-success-dark">
+                  <large><i class="ni ni-circle-08 mb-5" style="font-size: 60px"></i><large>
+                </div>
               <form role="form">
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
@@ -193,49 +183,42 @@
                 <div class="custom-control custom-control-alternative custom-checkbox">
                   <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
                   <label class="custom-control-label" for=" customCheckLogin">
-                    <span class="text-muted">Remember me</span>
+                    <span class="text-success-dark">Remember me</span>
                   </label>
                 </div>
                 <div class="text-center">
-                  <button type="button" class="btn btn-success-dark my-4">Sign in</button>
+                  <a type="Button" href="/DepartmentLanding" class="btn btn-success-dark my-4"><i class="fas fa-power-off mr-2"></i>Sign in</a>
                 </div>
               </form>
             </div>
           </div>
           <div class="row mt-3">
             <div class="col-6">
-              <a href="#" class="text-light"><small>Forgot password?</small></a>
+              <a href="#" class="text-secondary"><small>Forgot password?</small></a>
             </div>
-           <!-- <div class="col-6 text-right">
-              <a href="#" class="text-light"><small>Create new account</small></a>
-            </div> -->
           </div>
         </div>
       </div>
     </div>
+    </hr class="my-3">
   </div>
   <!-- Footer -->
+  
   <footer class="py-5" id="footer-main">
     <div class="container">
       <div class="row align-items-center justify-content-xl-between">
         <div class="col-xl-6">
-          <div class="copyright text-center text-xl-left text-muted">
-            &copy; 2019 <a href="https://www.creative-tim.com/" class="font-weight-bold ml-1" target="_blank">Creative Tim</a>
+          <div class="copyright text-center text-xl-left text-secondary">
+            &copy; 2020 <a href="#" class="font-weight-bold ml-1 text-secondary" target="_blank">Captools</a>
           </div>
         </div>
         <div class="col-xl-6">
           <ul class="nav nav-footer justify-content-center justify-content-xl-end">
             <li class="nav-item">
-              <a href="https://www.creative-tim.com/" class="nav-link" target="_blank">Creative Tim</a>
+              <a href="#" class="nav-link text-secondary" target="_blank">Captools</a>
             </li>
             <li class="nav-item">
-              <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">About Us</a>
-            </li>
-            <li class="nav-item">
-              <a href="http://blog.creative-tim.com/" class="nav-link" target="_blank">Blog</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.creative-tim.com/license" class="nav-link" target="_blank">License</a>
+              <a href="#" class="nav-link text-secondary" target="_blank">About Us</a>
             </li>
           </ul>
         </div>

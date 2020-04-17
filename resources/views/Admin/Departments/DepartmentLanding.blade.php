@@ -33,12 +33,146 @@
           </nav>
         </div>
         <div class="col-lg-6 col-5 text-right">
-        <button type="button" class="btn btn-sm btn-success-dark" data-toggle="modal" data-target="#preset"><i class="fas fa-plus mr-2"></i> Create Dep</button>
-        <button type="button" class="btn btn-sm btn-success-dark" data-toggle="modal" data-target="#preset"><i class="fas fa-chart-area mr-2"></i>Graph</button>
+        <button type="button" class="btn btn-sm btn-success-dark" data-toggle="modal" data-target="#Create_Dep"><i class="fas fa-plus mr-2"></i> Create Dep</button>
+        <button type="button" class="btn btn-sm btn-success-dark" data-toggle="modal" data-target="#Graph"><i class="fas fa-chart-area mr-2"></i>Graph</button>
         </div>
       </div>
     </div>
   </div>
+</div>
+
+
+<!-- Modal Create Dep -->
+<div class="modal fade" id="Create_Dep" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-success-dark" id="exampleModalLabel">Create New Department</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+          <form>
+            <!-- Input groups with icon -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-user text-success-dark"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Department Name" type="text">
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-envelope text-success-dark"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Division" type="text">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group input-group-merge">
+                    <input class="form-control" placeholder="Region" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fas fa-map-marker text-success-dark"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group input-group-merge">
+                    <input class="form-control" placeholder="Password" type="password">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fas fa-eye"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Input groups with icon -->
+            <div class="row">
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-credit-card"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Payment method" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><small class="font-weight-bold">USD</small></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="form-group">
+                  <div class="input-group input-group-merge">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="fas fa-globe-americas"></i></span>
+                    </div>
+                    <input class="form-control" placeholder="Phone number" type="text">
+                    <div class="input-group-append">
+                      <span class="input-group-text"><i class="fas fa-phone"></i></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-md btn-success-dark">Submit<i class="fas fa-upload ml-2"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- GraphView of Departments -->
+<div class="modal fade" id="Graph" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+          <div class=" " style="margin-bottom: 3rem;">
+            <!-- Surtitle -->
+            <h6 class="surtitle text-success-dark">Department Performance</h6>
+            <!-- Title -->
+            <h5 class="h3 mb-0 text-success-dark">Total</h5>
+          </div>
+          
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+        <div class="modal-body">
+        <div class="dropdown mb-3">
+                    <button class="btn btn-sm btn-success-dark dropdown-toggle" style="margin-top: 15px" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">View by</button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Year (12)</a>
+                        <a class="dropdown-item" href="#">half-year (6)</a>
+                        <a class="dropdown-item" href="#">quartly (4)</a>
+                    </div>
+                </div>
+              <div class="col-xl">
+              
+                <div class="chart">
+                  <!-- Chart wrapper -->
+                  <canvas id="chart-bars" class="chart-canvas"></canvas>
+                </div>
+              </div>
+          </div>
+      </div>
+    </div>
 </div>
 
 @endsection
@@ -99,7 +233,7 @@
                     <td> </td>
                     <td>
                         <div>
-                            <i class="fas fa-user-edit text-success-dark"></i> |
+                            <i class="fas fa-pen text-success-dark"></i> |
                             <i class="fas fa-trash text-success-dark"></i>
                         </div>
                     </td>
@@ -112,7 +246,7 @@
                     <td> </td>
                     <td>
                         <div>
-                            <i class="fas fa-user-edit text-success-dark"></i> |
+                            <i class="fas fa-pen text-success-dark"></i> |
                             <i class="fas fa-trash text-success-dark"></i>
                         </div>
                     </td>
@@ -126,5 +260,6 @@
 @endsection
 
 @section('scripts')
-
+<script src="../assets/vendor/chart.js/dist/Chart.min.js"></script>
+<script src="../assets/vendor/chart.js/dist/Chart.extension.js"></script>
 @endsection

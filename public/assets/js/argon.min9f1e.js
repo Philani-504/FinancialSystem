@@ -160,12 +160,12 @@ var Layout = function() {
                         line: {
                             tension: .4,
                             borderWidth: 4,
-                            borderColor: i.theme.secondary,
+                            borderColor: i.theme.successDark,
                             backgroundColor: i.transparent,
                             borderCapStyle: "rounded"
                         },
                         rectangle: {
-                            backgroundColor: i.theme.warning
+                            backgroundColor: i.theme.successDark
                         },
                         arc: {
                             backgroundColor: i.theme.secondary,
