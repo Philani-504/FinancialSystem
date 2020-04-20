@@ -1,17 +1,4 @@
 
-<!-- =========================================================
-* Argon Dashboard PRO v1.1.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/argon-dashboard-pro
-* Copyright 2019 Creative Tim (https://www.creative-tim.com)
-
-* Coded by Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
- -->
  <!DOCTYPE html>
 <html>
 
@@ -126,7 +113,7 @@
               <i class="fab fa-facebook-square"></i>
               <span class="text-success-dark d-lg-none">Facebook</span>
             </a>
-          </li> 
+          </li>
         </ul> -->
       </div>
     </div>
@@ -144,7 +131,7 @@
             </div>
           </div>
         </div>
-      </div> 
+      </div>
       <div class="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
           <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
@@ -163,13 +150,15 @@
             <div class="text-center text-success-dark">
                   <large><i class="ni ni-circle-08 mb-5" style="font-size: 60px"></i><large>
                 </div>
-              <form role="form">
+              <form role="form" method="post" action="{{ route('account.login')}}">
+
+                {{ scrf_field() }}
                 <div class="form-group mb-3">
                   <div class="input-group input-group-merge input-group-alternative">
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-email-83 text-success-dark"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Email" type="email">
+                    <input class="form-control" name="email" placeholder="Email" type="email">
                   </div>
                 </div>
                 <div class="form-group">
@@ -177,7 +166,7 @@
                     <div class="input-group-prepend">
                       <span class="input-group-text"><i class="ni ni-lock-circle-open text-success-dark"></i></span>
                     </div>
-                    <input class="form-control" placeholder="Password" type="password">
+                    <input class="form-control" name="password" placeholder="Password" type="password">
                   </div>
                 </div>
                 <div class="custom-control custom-control-alternative custom-checkbox">
@@ -186,8 +175,18 @@
                     <span class="text-success-dark">Remember me</span>
                   </label>
                 </div>
+
+                <div class="form-group">
+                 @if(session('errormessage')))
+
+                 <div class="alert alert-danger">{{ session('errormessage') }}</div>
+
+                   @endif
+                  </div>
+                </div>
+
                 <div class="text-center">
-                  <a type="Button" href="/DepartmentLanding" class="btn btn-success-dark my-4"><i class="fas fa-power-off mr-2"></i>Sign in</a>
+                  <button type="submit"  class="btn btn-success-dark my-4"><i class="fas fa-power-off mr-2"></i>Sign in</button>
                 </div>
               </form>
             </div>
@@ -203,7 +202,7 @@
     </hr class="my-3">
   </div>
   <!-- Footer -->
-  
+
   <footer class="py-5" id="footer-main">
     <div class="container">
       <div class="row align-items-center justify-content-xl-between">

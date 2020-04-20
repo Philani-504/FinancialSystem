@@ -32,3 +32,7 @@ Route::get('/DepartmentLanding', function () {
 Route::get('/Login', function () {
     return view('Admin.LoginReg.Login');
 });
+
+Route::post('/account/login','LoginController@login')->name('account.login');
+
+Route::get('/u/home','HomeController@home');
